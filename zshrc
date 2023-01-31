@@ -6,11 +6,11 @@ PATH_OF_THE_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
 USE_POWERLINE="true"
 
 # Source marlus-zsh-configuration
-if [[ -e /usr/share/zsh/marlus-zsh-config ]]; then
-  source /usr/share/zsh/marlus-zsh-config
+if [[ -e /usr/share/marlus-zsh-config/marlus-zsh-config ]]; then
+  source /usr/share/marlus-zsh-config/marlus-zsh-config
 fi
 
 # Use marlus zsh prompt
-if [[ -e /usr/share/zsh/marlus-zsh-prompt ]]; then
-  source /usr/share/zsh/marlus-zsh-prompt "${PATH_OF_THE_THEME}"
+if [[ -e /usr/share/marlus-zsh-config/marlus-zsh-prompt ]]; then
+  source /usr/share/marlus-zsh-config/marlus-zsh-prompt "${PATH_OF_THE_THEME}"
 fi
