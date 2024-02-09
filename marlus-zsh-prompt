@@ -16,36 +16,36 @@
 		fi
 	} 2>/dev/null
 
-  if [[ $USE_POWERLINE == false ]]; then
-    # Use 8 colors and ASCII.
-    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-    source /usr/share/marlus-zsh-config/p10k-portable.zsh
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=black,bold'
-  else
-    # Use 256 colors and UNICODE.
-    ## Config the theme file from arg. or use fallback theme file
-    if [ $# -gt 0 ]; then
-      if [[ -r "${1}" ]]; then
-        _POSH_THEME="${1}"
-      else
-        _POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
-      fi
-    else
-      _POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
-    fi
+	## Select the theme file
+	if [[ $USE_POWERLINE == false ]]; then
+		# Use 8 colors and ASCII.
+		## Config the theme file
+		_POSH_THEME="/usr/share/oh-my-posh/themes/probua.minimal.omp.json"
+	else
+		# Use 256 colors and UNICODE.
+		## Config the theme file from arg. or use fallback theme file
+		if [ $# -gt 0 ]; then
+			if [[ -r "${1}" ]]; then
+				_POSH_THEME="${1}"
+			else
+				_POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
+			fi
+		else
+			_POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
+		fi
+	fi
 
-    ## Apply the theme file
-    if [[ -r "${_POSH_THEME}" ]]; then
-      export POSH_THEME=${_POSH_THEME}
-      eval "$(oh-my-posh init zsh)"
-    else
-      echo "Warning: \"${_POSH_THEME}\" is unreachable!"
-      echo "Oh My Posh theme is disabled! Using the fallback \"elite2\" theme now!"
-      echo "Please check your theme file's existance and read permission!"
-      echo "Tips: run \"sudo chmod +r -R /usr/share/oh-my-posh/\" may helps when there're permission issues."
-      autoload -U promptinit
-      promptinit
-      prompt elite2 green yellow
-    fi
-  fi
+	## Apply the theme file
+	if [[ -r "${_POSH_THEME}" ]]; then
+		export POSH_THEME=${_POSH_THEME}
+		eval "$(oh-my-posh init zsh)"
+	else
+		echo "Warning: \"${_POSH_THEME}\" is unreachable!"
+		echo "Oh My Posh theme is disabled! Using the fallback \"elite2\" theme now!"
+		echo "Please check your theme file's existance and read permission!"
+		echo "Tips: run \"sudo chmod +r -R /usr/share/oh-my-posh/\" may helps when there're permission issues."
+		autoload -U promptinit
+		promptinit
+		prompt elite2 green yellow
+	fi
 }
