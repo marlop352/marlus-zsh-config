@@ -9,17 +9,17 @@ setopt rcexpandparam                                            # Array expensio
 setopt nocheckjobs                                              # Don't warn about running processes when exiting
 setopt numericglobsort                                          # Sort filenames numerically when it makes sense
 setopt nobeep                                                   # No beep
-setopt appendhistory                                            # Immediately append history instead of overwriting
-setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
-setopt inc_append_history                                       # save commands are added to the history immediately, otherwise only when shell exits.
-setopt histignorespace                                          # Don't save commands that start with space
 
+setopt APPEND_HISTORY                                           # Immediately append history instead of overwriting
 setopt BANG_HIST                                                # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY                                         # Write the history file in the ":start:elapsed;command" format.
 setopt SHARE_HISTORY                                            # Share history between all sessions.
+setopt INC_APPEND_HISTORY                                       # save commands are added to the history immediately, otherwise only when shell exits.
 setopt HIST_EXPIRE_DUPS_FIRST                                   # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_ALL_DUPS                                     # If a new command is a duplicate, remove the older one
 setopt HIST_IGNORE_DUPS                                         # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_SPACE                                        # Don't save commands that start with space
 setopt HIST_FIND_NO_DUPS                                        # Do not display a line previously found.
 setopt HIST_SAVE_NO_DUPS                                        # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS                                       # Remove superfluous blanks before recording entry.
