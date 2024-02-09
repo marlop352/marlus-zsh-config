@@ -14,3 +14,8 @@ fi
 if [[ -e /usr/share/marlus-zsh-config/marlus-zsh-prompt ]]; then
 	source /usr/share/marlus-zsh-config/marlus-zsh-prompt "${PATH_OF_THE_THEME}"
 fi
+
+# load .zsh_aliases if present
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
