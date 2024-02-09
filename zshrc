@@ -7,10 +7,10 @@ USE_POWERLINE="true"
 
 # Source marlus-zsh-configuration
 if [[ -e /usr/share/marlus-zsh-config/marlus-zsh-config ]]; then
-  source /usr/share/marlus-zsh-config/marlus-zsh-config
+	source /usr/share/marlus-zsh-config/marlus-zsh-config
 fi
 
 # Use marlus zsh prompt
 if [[ -e /usr/share/marlus-zsh-config/marlus-zsh-prompt ]]; then
-  source /usr/share/marlus-zsh-config/marlus-zsh-prompt "${PATH_OF_THE_THEME}"
+	source /usr/share/marlus-zsh-config/marlus-zsh-prompt "${PATH_OF_THE_THEME}"
 fi
