@@ -24,12 +24,8 @@
 	else
 		# Use 256 colors and UNICODE.
 		## Config the theme file from arg. or use fallback theme file
-		if [ $# -gt 0 ]; then
-			if [[ -r "${1}" ]]; then
-				_POSH_THEME="${1}"
-			else
-				_POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
-			fi
+		if [[ "${PATH_OF_THE_THEME}" != "" ]]; then
+			_POSH_THEME="${PATH_OF_THE_THEME}"
 		else
 			_POSH_THEME="/usr/share/oh-my-posh/themes/slimfat.omp.json"
 		fi
