@@ -14,6 +14,6 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # add ~/.local/bin to path if present
-if [ -f ~/.local/bin ]; then
+if [ -d ~/.local/bin ]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi
