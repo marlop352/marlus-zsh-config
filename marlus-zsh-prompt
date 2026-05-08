@@ -37,7 +37,7 @@
 	else
 		echo "Warning: \"${_POSH_THEME}\" is unreachable!"
 		echo "Oh My Posh theme is disabled! Using the fallback \"elite2\" theme now!"
-		echo "Please check your theme file's existance and read permission!"
+		echo "Please check your theme file's existence and read permission!"
 		echo "Tips: run \"sudo chmod +r -R /usr/share/oh-my-posh/\" may helps when there're permission issues."
 		autoload -U promptinit
 		promptinit

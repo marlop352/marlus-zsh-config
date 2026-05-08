@@ -66,12 +66,6 @@ bindkey '^[[1;5C' forward-word								#
 bindkey '^H' backward-kill-word								# delete previous word with ctrl+backspace
 bindkey '^[[Z' undo											# Shift+tab undo last action
 
-## Alias section
-alias cp='cp -i'																							# Confirm before overwriting something
-alias df='_f(){if test $# -eq 0;then opts=(-h);else opts=("$@");fi; df "$opts[@]"; unset -f _f};_f'			# Human-readable sizes
-alias free='_f(){if test $# -eq 0;then opts=(-m);else opts=("$@");fi; free "$opts[@]"; unset -f _f};_f'		# Show sizes in MB
-alias gitu='git add . && git commit && git push'
-
 
 # Theming section
 autoload -U compinit colors zcalc
@@ -209,4 +203,3 @@ add-zsh-hook preexec mzc_termsupport_preexec
 # File and Dir colors for ls and other outputs
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
-alias ls='ls $LS_OPTIONS'
