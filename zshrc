@@ -17,3 +17,8 @@ fi
 if [ -d ~/.local/bin ]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi
+
+# GRC auto aliases
+if [ -e /etc/grc.zsh ]; then
+	source /etc/grc.zsh
+fi
